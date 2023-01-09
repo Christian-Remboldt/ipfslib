@@ -23,7 +23,7 @@ There are some tools to interact with the IPFS network. But as this library is s
 Adding files to IPFS is simple.
 
     import ipfslib
-    api = ipfslib.Connect
+    api = ipfslib.Connect()
 
     cid = ipfslib.IPFS.add(api, "helloworld.txt")
     print(cid)
@@ -33,7 +33,7 @@ Adding files to IPFS is simple.
 Getting files from IPFS by the IPFS-Path. IPFS-Paths start with `/ipfs/` or `/ipns/`.
 
     import ipfslib
-    api = ipfslib.Connect
+    api = ipfslib.Connect()
 
     path = "/ipfs/QmQrXZ4iXdEKQMiQT6GRg2Wy3vxb9exR25sYdaqoHwWWuR"
     text = ipfslib.IPFS.cat(api, path)
@@ -43,7 +43,7 @@ Getting files from IPFS by the IPFS-Path. IPFS-Paths start with `/ipfs/` or `/ip
 This function can also take a `mode` Parameter. It can either be set to `'t'` for "Text Mode", which returns a string in plain text. The other mode is `'b'`, which returns a string with byte data. This can be useful to retreive imagages from IPFS.
 
     import ipfslib
-    api = ipfslib.Connect
+    api = ipfslib.Connect()
 
     path = "/ipfs/bafkreibih73gfbpgkmskacqtlsr4vtp47lmx24skh7jv27bnhsmhtivbeq"
     data = ipfslib.IPFS.cat(api, path, mode='b')
