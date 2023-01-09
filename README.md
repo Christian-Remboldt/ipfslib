@@ -149,5 +149,5 @@ This let's you rename your IPNS keys locally.
 ## Note
 That's actually it for Version 0.1, thank you for considering to use my library. You can check out my blog to find out how I made this.
 
-Blog: https://blog.remboldt.eu/ipfslib
+Blog: https://blog.remboldt.eu/ipfslib/  
 PyPi: https://pypi.org/project/ipfslib/
