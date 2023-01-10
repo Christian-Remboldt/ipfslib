@@ -2,9 +2,15 @@ import json
 import requests
 
 # Adds file to ipfs
-def add(api, filepath):
+def add(api, filepath, mode='t'):
+    if mode == 't':
+        read_mode = 'r'
+    elif mode == 'b':
+        read_mode = 'rb'
+    else:
+        raise ValueError("Mode has to be either 't' or 'b'.")
     files = {
-        'file': open(filepath, 'r'),
+        'file': open(filepath, read_mode),
     }
     response = requests.post('http://{endpoint}/api/v0/add'.format(endpoint=api.endpoint), files=files)
     raw_json = response.text
