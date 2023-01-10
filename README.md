@@ -28,6 +28,8 @@ Adding files to IPFS is simple.
     cid = ipfslib.IPFS.add(api, "helloworld.txt")
     print(cid)
 
+This function can take the parameter `mode`. If `'t'` is passed, the file is opened in read mode (r). If `'b'` is passed, then the file is opened in read byte mode (rb).
+
 ---
 ### IPFS.cat()
 Getting files from IPFS by the IPFS-Path. IPFS-Paths start with `/ipfs/` or `/ipns/`.
@@ -150,4 +152,4 @@ This let's you rename your IPNS keys locally.
 That's actually it for Version 0.1, thank you for considering to use my library. You can check out my blog to find out how I made this.
 
 Blog: https://blog.remboldt.eu/ipfslib/  
-PyPi: https://pypi.org/project/ipfslib/
+GitHub: https://github.com/remboldt/ipfslib/
