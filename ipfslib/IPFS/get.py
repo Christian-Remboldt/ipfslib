@@ -7,6 +7,6 @@ def get(api, content_hash, mode="t"):
     if mode == "t":
         return response.text[6:-2]
     elif mode == "b":
-        return response.content[6:-2]
+        return response.content[8:-2]
     else:
         raise ValueError("mode has to bei either 't' (Text) or 'b' (Binary). Standard is 't'.")
