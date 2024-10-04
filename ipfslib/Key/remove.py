@@ -2,7 +2,7 @@ import json
 import requests
 from typing import List
 
-# Lists all IPNS keys
+# Removes IPNS key
 def remove(api, key_name: str, extra_info: bool = False) -> List[dict]:
     params = {
         'arg': key_name,
