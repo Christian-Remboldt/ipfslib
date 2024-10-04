@@ -1,7 +1,7 @@
 import json
 import requests
 
-def get(api, content_hash, mode="t"):
+def get(api, content_hash: str, mode: str="t") -> None:
     url = "http://{endpoint}/api/v0/block/get?arg={cid}".format(endpoint=api.endpoint, cid=content_hash)
     response = requests.post(url)
     if mode == "t":

@@ -2,7 +2,7 @@ import json
 import requests
 
 # Resolve IPNS name
-def resolve(api, ipns_name):
+def resolve(api, ipns_name: str) -> None:
     response = requests.post('http://{endpoint}/api/v0/name/resolve'.format(endpoint=api.endpoint), params=ipns_name)
     raw_json = response.text
     try:

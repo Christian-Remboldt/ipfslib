@@ -1,8 +1,9 @@
 import json
 import requests
+from typing import List
 
 # Lists all IPNS keys
-def list(api):
+def list(api) -> List[dict]:
     response = requests.post('http://{endpoint}/api/v0/key/list'.format(endpoint=api.endpoint))
     raw_json = response.text
     try:

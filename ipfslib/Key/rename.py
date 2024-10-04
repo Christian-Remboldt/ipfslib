@@ -2,7 +2,7 @@ import json
 import requests
 
 # Renames key
-def rename(api, key_name, new_name):
+def rename(api, key_name: str, new_name: str) -> str:
     params = {
         'arg': [
             key_name,

@@ -2,7 +2,7 @@ import json
 import requests
 
 # Adds file to ipfs
-def add(api, filepath, mode='t'):
+def add(api, filepath: str, mode: str='t') -> str:
     if mode == 't':
         read_mode = 'r'
     elif mode == 'b':

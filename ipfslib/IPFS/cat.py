@@ -1,8 +1,9 @@
 import json
 import requests
+from typing import Union
 
 # Get content from IPFS by IPFS Path
-def cat(api, ipfs_path, mode="t"):
+def cat(api, ipfs_path: str, mode: str="t") -> Union[str, bytes]:
     if ipfs_path[0:6] == '/ipfs/':
         content_hash = ipfs_path[6:]
     elif ipfs_path[0:6] == '/ipns/':

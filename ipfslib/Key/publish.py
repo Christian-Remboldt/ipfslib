@@ -1,8 +1,9 @@
 import json
 import requests
+from typing import List
 
 # Publishes content to IPNS key
-def publish(api, content_hash, key_name="self", lifetime="24h"):
+def publish(api, content_hash: str, key_name: str="self", lifetime: str="24h") -> List[str]:
     params = {
         'arg': content_hash,
         'resolve': 'true',

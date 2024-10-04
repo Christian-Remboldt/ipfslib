@@ -2,7 +2,7 @@ import json
 import requests
 
 # Generates new private key
-def generate(api, key_name):
+def generate(api, key_name: str) -> str:
     params = {
         'arg': key_name,
     }
