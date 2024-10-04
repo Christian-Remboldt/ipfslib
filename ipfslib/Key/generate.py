@@ -10,5 +10,5 @@ def generate(api, key_name):
     try:
         ipns_name = json.loads(response.text)["Id"]
     except KeyError:
-        raise Exception(response['Message'])
+        raise Exception(json.loads(response.text)['Message'])
     return ipns_name

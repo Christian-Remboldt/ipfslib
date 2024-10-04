@@ -17,4 +17,4 @@ def add(api, filepath, mode='t'):
     try:
         return json.loads(raw_json)["Hash"]
     except KeyError:
-        raise Exception(response['Message'])
+        raise Exception(json.loads(raw_json)['Message'])

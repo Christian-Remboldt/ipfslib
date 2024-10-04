@@ -8,4 +8,4 @@ def list(api):
     try:
         return json.loads(raw_json)['Keys']
     except KeyError:
-        raise Exception(response['Message'])
+        raise Exception(json.loads(raw_json)['Message'])
