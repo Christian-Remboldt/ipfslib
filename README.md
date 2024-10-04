@@ -135,6 +135,17 @@ This let's you link a CID to your IPNS Name.
 If no key name is given to publish to, it will automatically publish to the 'self' key, which is your node's main key.
 
 ---
+### Key.remove()
+With this function you can remove previously generated keys.
+
+    import ipfslib
+    api = ipfslib.Connect()
+
+    ipfslib.Key.remove(api, key_name='test_key')
+
+If you try to remove a non exsistent key the function will throw an exception.
+
+---
 ### Key.rename()
 This let's you rename your IPNS keys locally. 
 
